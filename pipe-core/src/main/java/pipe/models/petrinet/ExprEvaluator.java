@@ -2,6 +2,7 @@ package pipe.models.petrinet;
 
 import net.sourceforge.jeval.EvaluationException;
 import net.sourceforge.jeval.Evaluator;
+import pipe.jeval.EvaluatorFactory;
 import pipe.exceptions.PetriNetComponentNotFoundException;
 import pipe.models.component.place.Place;
 import pipe.models.component.token.Token;
@@ -31,7 +32,7 @@ public class ExprEvaluator {
             }
         }
 
-        Evaluator evaluator = new Evaluator();
+        Evaluator evaluator = EvaluatorFactory.createEvaluator();
         String result = evaluator.evaluate(lexpr);
         return Double.parseDouble(result);
     }
