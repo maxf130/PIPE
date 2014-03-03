@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 import net.sourceforge.jeval.EvaluationException;
 import net.sourceforge.jeval.Evaluator;
+import net.sourceforge.jeval.EvaluatorFactory;
 
 import pipe.gui.ApplicationSettings;
 import pipe.views.MarkingView;
@@ -47,7 +48,7 @@ public class ExprEvaluator{
 				}
 			}
 		}
-		Evaluator evaluator = new Evaluator();
+		Evaluator evaluator = EvaluatorFactory.createEvaluator();
 		String result = null;
 		try {
 			result = evaluator.evaluate(lexpr);
