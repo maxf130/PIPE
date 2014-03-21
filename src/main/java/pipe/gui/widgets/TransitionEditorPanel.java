@@ -823,7 +823,8 @@ public class TransitionEditorPanel
             try {
                 if (singleServerRadioButton.isSelected()) {
                     // Double newRate = Double.parseDouble(rateTextField.getText());
-                    if (!(r == rate)) {
+                    //if (!(r == rate)) {
+                    if(true){
                         _view.getHistoryManager().addEdit(_transitionView.setRate(rateTextField.getText()));
                         //  _transitionView.setRateType("C");
                     }
